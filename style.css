@@ -1,0 +1,314 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Heebo:wght@600;900&family=Modak&family=Nunito&family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+   
+
+    background: LightGoldenRodYellow;
+    overflow: hidden;
+}
+
+body.switched {
+    transition: color 0.6s, background-color 0.6s;
+}
+
+h1,
+h2 {
+    text-align: left;
+    font-family: 'Modak', cursive;
+/*   font-family: 'Poppins', sans-serif;*/
+/*       font-family: 'Archivo', sans-serif;*/
+    
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    align-content: left;
+     line-height: 1;
+  z-index: 60;
+    font-size: 60pt;
+    font-weight: 200;
+    margin-top: -10px;
+    text-shadow: 2px 2px 4px #8B008B;
+    color: antiquewhite;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+   
+    color: coral;
+}
+
+.header {
+    align-content: center;
+    padding-top: 8em;
+    padding-bottom: 4em;
+}
+
+/*
+  Built-in class:
+    # author: Name
+*/
+.byline {
+    font-style: italic;
+}
+
+.written-in-ink {
+    z-index: 3;
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    text-shadow: 2px 2px 4px #8B008B;
+    width: 100%;
+    background: white;
+    transition: color 0.6s, background 0.6s;
+    margin-right: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 14px;
+    top: 0;
+}
+
+/* 
+  Enables <iframe> support work on itch.io when using mobile iOS
+*/
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+.maintitle{
+
+    align-content: center;
+  position: fixed;
+
+}
+
+.container {
+/*    display: block;*/
+    align-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 2em;
+    padding-bottom: 8em;
+  
+}
+
+.switched .container {
+    transition: background-color 0.6s;
+}
+
+p {
+      font-family: 'Heebo', sans-serif;
+     text-shadow: 1px 1px 2px #8B008B;
+    padding-left: 40px;
+    width: 80%;
+    font-size: 17pt;
+    color: seashell;
+    line-height: 1.4em;
+    font-weight:400;
+}
+
+a {
+    font-weight: 700;
+    color: black;
+       font-family: 'Poppins', sans-serif;
+    transition: color 0.6s;
+    
+    text-decoration: none;
+}
+
+a:hover {
+    color: LightGoldenRodYellow;
+    
+    transition: color 0.1s;
+}
+
+strong {
+    
+    color: LightGoldenRodYellow;
+    font-weight: bold;
+}
+
+img {
+    opacity: 50%;
+    mix-blend-mode:overlay;
+    position: fixed;
+    z-index: -5;
+    align-content: right;
+/*
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+*/
+    max-width: 100%;
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    
+    display: none;
+}
+
+.container>* {
+  
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+/*
+  Class applied to all choices
+  (Will always appear inside <p> element by default.)
+*/
+.choice {
+    text-align: left;
+    line-height: 1.7em;
+}
+
+/* 
+  Class applied to first choice
+*/
+:not(.choice)+.choice {
+    padding-top: 1em;
+}
+
+/*
+  Class applied to choice links
+*/
+.choice a {
+    text-align: left;
+    font-size: 15pt;
+}
+
+/* 
+  Built-in class:
+    The End # CLASS: end
+*/
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: LightGoldenRodYellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#controls {
+    z-index: 4;
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 24px;
+    top: 4px;
+    user-select: none;
+    background: white;
+    transition: color 0.6s, background 0.6s;
+}
+
+#controls [disabled] {
+    color: coral;
+}
+
+#controls>*:not(:last-child):after {
+    content: " ";
+}
+
+@media screen and (max-width: 980px) {
+    #controls {
+        z-index: 2;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* 
+  Dark Theme (Added in Inky 0.10.0)
+    # theme: dark
+*/
+
+body.dark {
+    
+    background: sandybrown;
+    color: LightGoldenRodYellow;
+}
+
+.dark h2 {
+    color: sandybrown;
+}
+
+.dark .container {
+/*    mix-blend-mode: exclusion;*/
+    
+/*    background: transparent;*/
+/*
+       background: blueviolet;
+    opacity: 80%;
+*/
+    align-content: center;
+}
+
+.dark .written-in-ink {
+    
+    background:transparent ;
+}
+
+.dark a {
+    text-align: left;
+   
+     color: seashell;
+    transition: color 0.6s;
+}
+
+.dark a:hover {
+    text-align: left;
+   color: seashell;
+    text-shadow: 2px 2px 8px #8B008B;
+}
+
+.dark strong {
+    color: LightGoldenRodYellow;
+}
+
+.dark #controls [disabled] {
+    color: #444;
+}
+
+.dark .end {
+    color: LightGoldenRodYellow;
+}
+
+.dark #controls {
+    background: transparent;
+}
